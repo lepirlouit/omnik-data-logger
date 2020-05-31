@@ -42,6 +42,13 @@ api_key = <YOUR API KEY>
 sys_id = <YOUR SYSTEM ID>
 use_temperature = true
 
+[influxdb]
+host = localhost
+port = 8086
+database = influxdbDatabase
+table = influxdbTable
+use_temperature = true
+
 [openweathermap]
 api_key = <YOUR API KEY>
 endpoint = api.openweathermap.org
@@ -105,7 +112,7 @@ $ systemd status omnik-data-logger
 Working on a couple of plugins to customize processing of the omnik-portal data:
 
 * `pvoutput` ~ write data to [PVOutput](https://www.pvoutput.org)
-* `influxdb` ~ write data to a [InfluxDB](https://www.influxdata.com/) time series database (**WORK IN PROGRESS**)
+* `influxdb` ~ write data to a [InfluxDB](https://www.influxdata.com/) time series database
 * ...
 
 ## BONUS: Docker
